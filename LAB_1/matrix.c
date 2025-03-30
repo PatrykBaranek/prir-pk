@@ -3,7 +3,7 @@
 #include<omp.h>
 #include<time.h>
 
-#define N 1000
+#define N 2000
 
 int test(double **Matrix1, double **Matrix2, double **Matrix3) {
   int i,j,k,chk=0;
@@ -55,7 +55,6 @@ int main(void) {
 
   //fragment for paralelization
   for (i = 0; i < N; i++) {
-    #pragma omp parallel for private(j,k,sum)
     for (j = 0; j < N; j++) {
       sum = 0;
 

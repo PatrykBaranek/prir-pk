@@ -39,7 +39,7 @@ int main()
 
 	printf("Petla shared:\n"); // zmienna jest współdzielona między wątkami
 	a=0;
-	#pragma omp parallel for shared(a)
+	#pragma omp parallel for shared(a) 
 	for(i=0; i<10; i++) {
 		//2. Co się stanie gdy wyłączymy zamek?
 		// omp_set_lock(&lock);
